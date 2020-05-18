@@ -1,6 +1,10 @@
+from tkinter import *
+
+global screen
+screen = Tk()
 
 def register():
-    reg_screen = Toplevel(main_screen)
+    reg_screen = Toplevel(screen)
     reg_screen.title("Create Account")
     reg_screen.geometry("300x250")
 
