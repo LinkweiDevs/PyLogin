@@ -40,7 +40,7 @@ def register():
     #This is the submit button that calls the register_user function when clicked
     Button(reg_screen, text = "Register", width = 10, height = 1, bg = "blue", command = register_user).pack()
 
-
+    
 
 #This function performs the actual registration by saving user info in a text file
 def register_user():
@@ -66,6 +66,8 @@ def register_user():
 
     Label(reg_screen,text ="").pack()
     Button(reg_screen, text = "REGISTER", width = 10, height = 1, bg = "blue").pack()
+
+    reg_screen.after(2000, reg_screen.destroy)
 
 def login_():
     global reg_screen
@@ -110,5 +112,13 @@ def login_user():
     file.write(password_login)
     file.close()
 
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+
+    Label(reg_screen, text = "Sign Up successful", fg = "green", font = ("calibri", 11)).pack()
+
     Label(reg_screen,text ="").pack()
     Button(reg_screen, text = "LOGIN", width = 10, height = 1, bg = "GREEN").pack()
+    
+    reg_screen.after(3000, reg_screen.destroy)
+
