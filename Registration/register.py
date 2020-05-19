@@ -55,13 +55,8 @@ def register_user():
     file.write(password_info)
     file.close()
 
-<<<<<<< HEAD
-    #CLear the input on the user entry text field after submitting the info
-    #Clears from element 0 to the last element
-=======
 
     #Clear the entries in text field after submitting info
->>>>>>> 2a6a0505f5358426439919d6e642cc21ee0d1735
     username_entry.delete(0, END)
     password_entry.delete(0, END)
 
@@ -113,6 +108,9 @@ def login_user():
     file.write(username_login + "\n")
     file.write(password_login)
     file.close()
+
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
 
     Label(reg_screen,text ="").pack()
     Button(reg_screen, text = "LOGIN", width = 10, height = 1, bg = "GREEN").pack()
