@@ -9,7 +9,7 @@ def main_screen():
     Label(text = "").pack()
 
     #The Login button
-    Button(text = "LOGIN",height = "2", width = "30",bg = "green").pack()
+    Button(text = "LOGIN",height = "2", width = "30",bg = "green",command = login_).pack()
     Label(text = "").pack()
 
     #The Register button
