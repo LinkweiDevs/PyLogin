@@ -56,7 +56,8 @@ def register_user():
     file.close()
 
 
-    #Clear the entries in text field after submitting info
+    #CLear the input on the user entry text field after submitting the info
+    #Clears from element 0 to the last element
     username_entry.delete(0, END)
     password_entry.delete(0, END)
 
