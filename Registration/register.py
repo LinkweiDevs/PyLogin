@@ -55,7 +55,8 @@ def register_user():
     file.write(password_info)
     file.close()
 
-    #Clear the entries in text field after submitting info
+    #CLear the input on the user entry text field after submitting the info
+    #Clears from element 0 to the last element
     username_entry.delete(0, END)
     password_entry.delete(0, END)
 
@@ -64,3 +65,49 @@ def register_user():
 
     Label(reg_screen,text ="").pack()
     Button(reg_screen, text = "REGISTER", width = 10, height = 1, bg = "blue").pack()
+
+def login_():
+    global reg_screen
+    reg_screen = Toplevel(screen)
+    reg_screen.title("LOGIN TO YOUR ACCOUNT")
+    reg_screen.geometry("300x250")
+
+    global username
+    global password
+    global username_entry
+    global password_entry
+    username = StringVar()
+    password = StringVar()
+
+    Label(reg_screen, text = "Enter you details below", bg ="green").pack()
+    Label(reg_screen, text = "").pack()
+
+    username_label = Label(reg_screen, text = "ENTER USERNAME")
+    username_label.pack()
+
+    username_entry = Entry(reg_screen, textvariable = username)
+    username_entry.pack()
+
+    Label(text ="").pack()
+    Label(reg_screen,text ="ENTER PASSWORD").pack()
+
+    password_entry = Entry(reg_screen, textvariable = password, show = '*')
+    password_entry.pack()
+
+    Label(reg_screen,text ="").pack()
+    Button(reg_screen, text = "LOGIN", width = 10, height = 1, bg = "green", command = login_user).pack()
+
+
+    #funtion to login the user
+def login_user():
+    username_login = username.get()
+    password_login = password.get()
+
+    file = open(username_login, "w")
+
+    file.write(username_login + "\n")
+    file.write(password_login)
+    file.close()
+
+    Label(reg_screen,text ="").pack()
+    Button(reg_screen, text = "LOGIN", width = 10, height = 1, bg = "GREEN").pack()
