@@ -106,11 +106,15 @@ def login_user():
     username_login = username.get()
     password_login = password.get()
 
+    #This opens a file in append mode
+    #Seperates username and password with comma
+    #Seperates credentials of each user with a \n
     file = open("credentials.txt", "a")
     file.write(username_login +",")
     file.write(password_login + "\n")
     file.close()
 
+    #Clears the text input field from element 0 (1st) to the END (last)
     username_entry.delete(0, END)
     password_entry.delete(0, END)
 
