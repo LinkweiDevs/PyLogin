@@ -123,4 +123,4 @@ def login_user():
     Label(reg_screen,text ="").pack()
     Button(reg_screen, text = "LOGIN", width = 10, height = 1, bg = "GREEN").pack()
 
-    reg_screen.after(3000, reg_screen.destroy)
+    reg_screen.after(1000, reg_screen.destroy)
