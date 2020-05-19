@@ -7,6 +7,8 @@ def main_screen():
     screen.title("SAMPLE LOGIN PAGE")
     Label(text = "LOG IN SCREEN ", bg = "grey", width = "300", height = "2",font = ("calibri", 13)).pack()
     Label(text = "").pack()
+
+    #The Login button
     Button(text = "LOGIN",height = "2", width = "30",bg = "green",command = login_).pack()
     Label(text = "").pack()
 
